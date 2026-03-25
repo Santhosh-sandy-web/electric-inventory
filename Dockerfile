@@ -4,9 +4,8 @@ WORKDIR /app
 
 COPY . ./
 
-WORKDIR /app/ElectricInventorySystem
-RUN dotnet restore
-RUN dotnet publish -c Release -o /app/out
+RUN dotnet restore ElectricInventorySystem/ElectricInventorySystem.csproj
+RUN dotnet publish ElectricInventorySystem/ElectricInventorySystem.csproj -c Release -o /app/out
 
 # Runtime stage
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
