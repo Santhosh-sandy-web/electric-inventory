@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ElectricInventorySystem.Models.Component>
+
+<div class="container mt-4">
+    <h2>Components List</h2>
+
+    <form method="get" class="mb-3">
+        <input type="text" name="search" placeholder="Search..." class="form-control" />
+    </form>
+
+    <a href="/Component/Create" class="btn btn-success mb-3">Add New</a>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Component Name</th>
+                <th>Part No</th>
+                <th>Voltage</th>
+                <th>Amp</th>
+                <th>Quantity</th>
+                <th>Brand Name</th>
+                <th>Location</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ProductName</td>
+                    <td>@item.ComponentName</td>
+                    <td>@item.PartNo</td>
+                    <td>@item.Voltage</td>
+                    <td>@item.Amp</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.BrandName</td>
+                    <td>@item.Location</td>
+                    <td>
+                        <a href="/Component/Edit/@item.ComponentId" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="/Component/Delete/@item.ComponentId" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

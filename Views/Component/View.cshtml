@@ -1,0 +1,36 @@
+﻿@model IEnumerable<ElectricInventorySystem.Models.Component>
+
+<h2>Components List</h2>
+
+<a href="/Component/Create">Add New</a>
+<table class="table table-bordered">
+    <tr>
+        <th>Product Name</th>
+        <th>Component Name</th>
+        <th>Part No</th>
+        <th>Voltage</th>
+        <th>Amp</th>
+        <th>Quantity</th>
+        <th>Brand Name</th>
+        <th>Location</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ProductName</td>
+            <td>@item.ComponentName</td>
+            <td>@item.PartNo</td>
+            <td>@item.Voltage</td>
+            <td>@item.Amp</td>
+            <td>@item.Quantity</td>
+            <td>@item.BrandName</td>
+            <td>@item.Location</td>
+            <td>
+                <a href="/Component/Edit/@item.ComponentId" class="btn btn-warning btn-sm">Edit</a>
+                <a href="/Component/Delete/@item.ComponentId" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

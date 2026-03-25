@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="container mt-5">
+
+    <h2 class="text-center mb-5 fw-bold">⚡ Electric Inventory Dashboard</h2>
+
+    <div class="row g-4">
+
+        <!-- Component List -->
+        <div class="col-md-4">
+            <a asp-controller="Component" asp-action="Index" class="card-link">
+                <div class="card dashboard-card shadow-lg text-center p-4">
+                    <h4 class="text-primary">Components</h4>
+                    <p>View all components</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Add Component -->
+        <div class="col-md-4">
+            <a asp-controller="Component" asp-action="Create" class="card-link">
+                <div class="card dashboard-card shadow-lg text-center p-4">
+                    <h4 class="text-success">Add Component</h4>
+                    <p>Create new item</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Suppliers -->
+        <div class="col-md-4">
+            <a asp-controller="Supplier" asp-action="Index" class="card-link">
+                <div class="card dashboard-card shadow-lg text-center p-4">
+                    <h4 class="text-warning">Suppliers</h4>
+                    <p>Manage suppliers</p>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+</div>

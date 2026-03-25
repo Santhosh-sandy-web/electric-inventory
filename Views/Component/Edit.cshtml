@@ -1,0 +1,54 @@
+﻿@model ElectricInventorySystem.Models.Component
+
+<div class="container mt-4">
+    <h2 class="text-warning mb-4">Edit Component</h2>
+
+    <form asp-action="Edit" method="post" class="card p-4 shadow">
+        <input type="hidden" asp-for="ComponentId" />
+
+        <div class="mb-3">
+            <label class="form-label">ProductName</label>
+            <input asp-for="ProductName" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">ComponentName</label>
+            <input asp-for="ComponentName" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">PartNo</label>
+            <input asp-for="PartNo" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Voltage</label>
+            <input asp-for="Voltage" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Amp</label>
+            <input asp-for="Amp" class="form-control" />
+        </div>
+
+        
+        <div class="mb-3">
+            <label class="form-label">Quantity</label>
+            <input asp-for="Quantity" class="form-control" />
+        </div>
+
+        
+        <div class="mb-3">
+            <label class="form-label">BrandName</label>
+            <input asp-for="BrandName" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Location</label>
+            <input asp-for="Location" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-warning">Update</button>
+        <a asp-action="Index" class="btn btn-secondary">Back</a>
+    </form>
+</div>
